@@ -28,36 +28,30 @@
 		<header>
 			<section class="header-section">
 				<div role="logotype" class="header-logo-mobile">
-					<a arial-label="logotype" href="index.html">
-						<picture>
-							<source srcset="<?php bloginfo('template_url'); ?>/assets/img/logo_for_phone.svg" type="image/webp"><img class="logo" src="<?php bloginfo('template_url'); ?>/assets/img/logo_for_phone.svg" alt="logo">
-						</picture>
-					</a>
+					<?php the_custom_logo( $blog_id ); ?>
 				</div>
 				<div role="logotype" class="header-logo-desktop">
-					<a arial-label="logotype" href="index.html">
-						<picture>
-							<source srcset="<?php bloginfo('template_url'); ?>/assets/img/logo-desktop.svg" type="image/webp"><img class="logo" src="<?php bloginfo('template_url'); ?>/assets/img/logo-desktop.svg" alt="logo">
-						</picture>
-					</a>
+					<?php the_custom_logo( $blog_id ); ?>
 				</div>
 				<div role="navigation" class="header-menu">
 					<nav class="navigation">
-						<ul>
+					<?php wp_nav_menu('menu'); ?>
+						<!-- <ul>
 							<li><a arial-label="Перейти на главную" href="#">Главная</a></li>
 							<li><a class="services" arial-label="Перейти к услугам" href="#">Услуги</a></li>
 							<li><a class="about-us" arial-label="Перейти о нас" href="#">О нас</a></li>
 							<li><a class="contacts-link" arial-label="Перейти к контактам" href="#">Контакты</a></li>
-						</ul>
+						</ul> -->
 					</nav>
 					<menu class="menu">
 						<button class="close hide"></button>
-						<ul class="menu-links hide">
+						<?php wp_nav_menu('menu'); ?>
+						<!-- <ul class="menu-links hide">
 							<li><a arial-label="Перейти на главную" href="#">Главная</a><img style="display: none;" src="<?php bloginfo('template_url'); ?>/assets/img/menu_item_ellipse.svg" alt="menu item icon"></li>
 							<li><a class="services" arial-label="Перейти к услугам" href="#">Услуги</a><img style="display: none;" src="<?php bloginfo('template_url'); ?>/assets/img/menu_item_ellipse.svg" alt="menu item icon"></li>
 							<li><a class="about-us" arial-label="Перейти о нас" href="#">О нас</a><img style="display: none;" src="<?php bloginfo('template_url'); ?>/assets/img/menu_item_ellipse.svg" alt="menu item icon"></li>
 							<li><a class="contacts-link" arial-label="Перейти к контактам" href="#">Контакты</a><img style="display: none;" src="<?php bloginfo('template_url'); ?>/assets/img/menu_item_ellipse.svg" alt="menu item icon"></li>
-						</ul>
+						</ul> -->
 					</menu>
 				</div>
 			</section>

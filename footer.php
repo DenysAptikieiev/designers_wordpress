@@ -19,12 +19,7 @@
             Заполните форму обратной связи
             и получите профессиональною консультацию онлайн
         </h4>
-        <form action="#" method="POST">
-            <input id="" class="" type="text" name="name" placeholder="Ваше имя" required>
-            <input id="" class="" type="tel" name="phone" placeholder="Номер телефона" required>
-            <input id="" class="" type="email" name="email" placeholder="Email адрес" required>
-            <button type="submit">Заказать звонок</button>
-        </form>
+            <?php echo do_shortcode('[contact-form-7 id="125" title="Контактная форма 1"]');?>
     </section>
     <section class="footer-contacts-section">
         <div>

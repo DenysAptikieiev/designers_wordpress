@@ -1,6 +1,7 @@
 <?php
 
-
+add_theme_support( 'custom-logo' );
+add_theme_support( 'menus' );
 add_action( 'wp_enqueue_scripts', 'designers_style' );
 add_action( 'wp_enqueue_scripts', 'designers_scripts' );
 
@@ -18,7 +19,7 @@ function designers_style() {
 };
 
 function designers_scripts() {
-	wp_enqueue_script( 'app_script', get_template_directory_uri() . '/js/app.min.js', null, null, true );
+	wp_enqueue_script( 'app_script', get_template_directory_uri() . '/js/app.js', null, null, true );
 
 	wp_register_script( 'swiper-bundle-js', 'https://unpkg.com/swiper/swiper-bundle.js');
     	wp_enqueue_script( 'swiper-bundle-js' );
@@ -26,4 +27,5 @@ function designers_scripts() {
 	wp_register_script( 'swiper-bundle-min-js', 'https://unpkg.com/swiper/swiper-bundle.min.js');
     	wp_enqueue_script( 'swiper-bundle-min-js' );
 };
+
 
